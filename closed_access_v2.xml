@@ -1,22 +1,25 @@
-<opencost:collection xmlns:opencost="http://intact-project.org">
+<opencost:publication xmlns:opencost="https://opencost.de">
   <opencost:amounts_paid>
-    <item>
-      <amount_invoice currency="GBP" type="cover">500.0</amount_invoice>
-      <date_paid>2020-12-15</date_paid>
-      <invoice_number>INV_008530</invoice_number>
-      <amount_paid currency="EUR" type="cover">559.69</amount_paid>
-    </item>
+    <opencost:item>
+      <opencost:amount_invoice>500.0</opencost:amount_invoice>
+      <opencost:date_paid>2020-12-15</opencost:date_paid>
+      <opencost:type>Cover</opencost:type>
+      <opencost:invoice_number>INV_008530</opencost:invoice_number>
+      <opencost:amount_paid>559.69</opencost:amount_paid>
+      <opencost:publisher>RSC Publ.</opencost:publisher>
+    </opencost:item>
   </opencost:amounts_paid>
-  <opencost:doi>10.1039/D0CP04104A</opencost:doi>
-  <opencost:institution>desy</opencost:institution>
-  <opencost:institution type="ror">https://ror.org/01js2sh04</opencost:institution>
-  <opencost:oa_status>closed</opencost:oa_status>
-  <opencost:period>2020</opencost:period>
-  <opencost:publisher>RSC Publ.</opencost:publisher>
+  <opencost:institutions>
+    <opencost:institution>desy</opencost:institution>
+    <opencost:institution type="ror">https://ror.org/01js2sh04</opencost:institution>
+  </opencost:institutions>
+  <opencost:oa_status>close</opencost:oa_status>
   <opencost:type>journal article</opencost:type>
-  <opencost:id type="local">PUBDB-2020-04988</opencost:id>
-  <opencost:id type="oai">oai:bib-pubdb1.desy.de:453035</opencost:id>
-  <opencost:id type="doi">10.1039/D0CP04104A</opencost:id>
-  <opencost:id type="doi">10.3204/PUBDB-2020-04988</opencost:id>
-  <opencost:id type="ut">altmetric:92604582</opencost:id>
-</opencost:collection>
+  <opencost:identifiers>
+    <opencost:id type="local">PUBDB-2020-04988</opencost:id>
+    <opencost:id type="oai">oai:bib-pubdb1.desy.de:453035</opencost:id>
+    <opencost:id type="doi">10.1039/D0CP04104A</opencost:id>
+    <opencost:id type="doi">10.3204/PUBDB-2020-04988</opencost:id>
+    <opencost:id type="ut">altmetric:92604582</opencost:id>
+    </opencost:identifiers>
+</opencost:publication>
