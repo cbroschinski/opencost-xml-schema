@@ -161,24 +161,58 @@ elementFormDefault="qualified">
             <xs:element name="item" minOccurs="1" maxOccurs="unbounded">
               <xs:complexType>
                 <xs:all>
-                  <xs:element name="amount_invoice" type="xs:decimal" minOccurs="0"/>
+                  <xs:element name="amount_invoice" minOccurs="0">
+                    <xs:complexType>
+                      <xs:simpleContent>
+                        <xs:extension base="xs:decimal">
+                          <xs:attribute name="currency">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:string">
+                                <xs:pattern value="[A-Z]{3}"/>
+                              </xs:restriction>
+                             </xs:simpleType>
+                          </xs:attribute>
+                        </xs:extension>
+                      </xs:simpleContent>
+                    </xs:complexType>
+                  </xs:element>
                   <xs:element name="invoice_number" type="xs:string" minOccurs="0"/>
-                  <xs:element name="amount_paid" type="xs:decimal"/>
-                  <xs:element name="type">
-                    <xs:simpleType>
-                      <xs:restriction base="xs:string">
-                        <xs:enumeration value="APC" />
-                        <xs:enumeration value="Colour charges" />
-                        <xs:enumeration value="Cover" />
-                        <xs:enumeration value="Hybrid-OA" />
-                        <xs:enumeration value="Other" />
-                        <xs:enumeration value="Page charges" />
-                        <xs:enumeration value="Permission" />
-                        <xs:enumeration value="Publication Charges" />
-                        <xs:enumeration value="Reprint" />
-                        <xs:enumeration value="Submission Fee" />
-                      </xs:restriction>
-                    </xs:simpleType>
+                  <xs:element name="amounts_paid">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="amount_paid" minOccurs="1" maxOccurs="unbounded">
+                          <xs:complexType>
+                            <xs:simpleContent>
+                              <xs:extension base="xs:decimal">
+                                <xs:attribute name="currency">
+                                  <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                      <xs:pattern value="[A-Z]{3}"/>
+                                    </xs:restriction>
+                                   </xs:simpleType>
+                                </xs:attribute>
+                                <xs:attribute name="type">
+                                  <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                    <xs:enumeration value="APC" />
+                                    <xs:enumeration value="Colour charges" />
+                                    <xs:enumeration value="Cover" />
+                                    <xs:enumeration value="Hybrid-OA" />
+                                    <xs:enumeration value="Other" />
+                                    <xs:enumeration value="Page charges" />
+                                    <xs:enumeration value="Permission" />
+                                    <xs:enumeration value="Publication Charges" />
+                                    <xs:enumeration value="Reprint" />
+                                    <xs:enumeration value="Submission Fee" />
+                                    </xs:restriction>
+                                  </xs:simpleType>
+                                </xs:attribute>
+                              </xs:extension>
+                            </xs:simpleContent>
+                          </xs:complexType>
+                        </xs:element>
+                      </xs:sequence>
+                    </xs:complexType>
                   </xs:element>
                   <xs:element name="date_paid" type="xs:string"/>
                   <xs:element name="publisher" type="xs:string" minOccurs="0"/>
