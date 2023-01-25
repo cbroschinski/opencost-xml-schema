@@ -1,7 +1,7 @@
 <opencost:publication xmlns:opencost="https://opencost.de">
   <opencost:amounts_paid>
     <opencost:item>
-      <opencost:amount_invoice>500.0</opencost:amount_invoice>
+      <opencost:amount_invoice currency="EUR">500.0</opencost:amount_invoice>
       <opencost:date_paid>2020-12-15</opencost:date_paid>
       <opencost:invoice_number>INV_008530</opencost:invoice_number>
       <opencost:amounts_paid>

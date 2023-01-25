@@ -165,7 +165,7 @@ elementFormDefault="qualified">
                     <xs:complexType>
                       <xs:simpleContent>
                         <xs:extension base="xs:decimal">
-                          <xs:attribute name="currency">
+                          <xs:attribute name="currency" use="required">
                             <xs:simpleType>
                               <xs:restriction base="xs:string">
                                 <xs:pattern value="[A-Z]{3}"/>
@@ -184,14 +184,14 @@ elementFormDefault="qualified">
                           <xs:complexType>
                             <xs:simpleContent>
                               <xs:extension base="xs:decimal">
-                                <xs:attribute name="currency">
+                                <xs:attribute name="currency" use="required">
                                   <xs:simpleType>
                                     <xs:restriction base="xs:string">
                                       <xs:pattern value="[A-Z]{3}"/>
                                     </xs:restriction>
                                    </xs:simpleType>
                                 </xs:attribute>
-                                <xs:attribute name="type">
+                                <xs:attribute name="type"  use="required">
                                   <xs:simpleType>
                                     <xs:restriction base="xs:string">
                                     <xs:enumeration value="APC" />
