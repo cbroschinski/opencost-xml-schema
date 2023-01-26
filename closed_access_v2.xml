@@ -5,7 +5,7 @@
       <opencost:date_paid>2020-12-15</opencost:date_paid>
       <opencost:invoice_number>INV_008530</opencost:invoice_number>
       <opencost:amounts_paid>
-        <opencost:amount_paid currency="EUR" type="Cover">559.69</opencost:amount_paid>
+        <opencost:amount_paid currency="EUR" type="cover">559.69</opencost:amount_paid>
       </opencost:amounts_paid>
       <opencost:publisher>RSC Publ.</opencost:publisher>
     </opencost:item>
@@ -14,7 +14,7 @@
     <opencost:institution>desy</opencost:institution>
     <opencost:institution type="ror">https://ror.org/01js2sh04</opencost:institution>
   </opencost:institutions>
-  <opencost:oa_status>close</opencost:oa_status>
+  <opencost:oa_status>closed</opencost:oa_status>
   <opencost:type>journal article</opencost:type>
   <opencost:identifiers>
     <opencost:id type="local">PUBDB-2020-04988</opencost:id>
